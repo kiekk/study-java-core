@@ -7,4 +7,9 @@ public class Final {
 //        new Final().finalString = "1234";
         // Cannot assign a value to final variable 'finalString
     }
+
+    public static void test(final String finalArgument) {
+//        finalArgument = "test";
+        // Cannot assign a value to final variable 'finalArgument'
+    }
 }
