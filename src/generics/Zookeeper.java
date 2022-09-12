@@ -1,7 +1,7 @@
 package generics;
 
 public class Zookeeper {
-    public void giveMeat(Cage<Carnivore> cage, Meat m) {
+    public void giveMeat(Cage<? extends Carnivore> cage, Meat m) {
         // ...
     }
 }

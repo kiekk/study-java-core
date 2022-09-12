@@ -17,5 +17,15 @@ public class Generics {
         Meat m = new Meat();
         Cage<Tiger> ct = new Cage<>();
         // zk.giveMeat(ct, m); // COMPILE ERROR, Cage<Carnivore> 가 Cage<Tiger> 의 상위 타입이 아님.
+
+        // Cage<? extends Carnivore> 타입에
+        // Cage<Tiger> 할당 가능
+        zk.giveMeat(ct, m);
+
+        // Cage<? extends Carnivore> 타입에
+        // Cage<Lion> 할당 가능
+        Cage<Lion> cl = new Cage<>();
+        zk.giveMeat(cl, m);
+
     }
 }
