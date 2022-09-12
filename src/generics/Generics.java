@@ -27,5 +27,9 @@ public class Generics {
         Cage<Lion> cl = new Cage<>();
         zk.giveMeat(cl, m);
 
+        Cage<? extends Carnivore> cage = ct; // OK
+        // cage.push(new Tiger()); // COMPILE ERROR
+        // push(? extends Carnivore)
+
     }
 }
