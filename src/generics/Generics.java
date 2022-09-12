@@ -31,5 +31,15 @@ public class Generics {
         // cage.push(new Tiger()); // COMPILE ERROR
         // push(? extends Carnivore)
 
+        // Cage<? super Tiger> 타입에 Cage<Tiger> 할당 가능
+        Cage<? super Tiger> ctt = ct;
+
+        ctt.push(new Tiger()); // OK, ctt는 최소 Cage<Tiger> 이거나 혹은 그 상위 타입임이 확정됐기 때문에
+
+        Cage<Carnivore> ct2 = new Cage<>();
+
+        // Cage<? super Tiger> 타입에 Cage<Carnivore> 할당 가능
+        Cage<? super Tiger> ctt2 = ct2;
+        ctt2.push(new Tiger()); // OK
     }
 }
