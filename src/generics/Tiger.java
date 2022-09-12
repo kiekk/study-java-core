@@ -1,4 +1,4 @@
 package generics;
 
-public class Tiger extends Animal {
+public class Tiger extends Carnivore {
 }
