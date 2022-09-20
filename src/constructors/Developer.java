@@ -1,19 +1,21 @@
 package constructors;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Developer {
 
     private String firstName;
     private String lastName;
-    private List<String> languages;
+    private List<String> languages = new ArrayList<>();
 
     public Developer() {
     }
 
     public Developer(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this(firstName, lastName, Collections.singletonList("Java"));
     }
 
     public Developer(String firstName, String lastName, List<String> languages) {
