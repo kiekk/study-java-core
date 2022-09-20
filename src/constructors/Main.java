@@ -13,11 +13,14 @@ public class Main {
         // 객체 초기화 후
         // private List<String> languages = new ArrayList<>();
         // Developer{firstName='soonho', lastName='yoon', languages=[]}
+
+        // 블록 코드 추가 {}
+        // Developer{firstName='soonho', lastName='yoon', languages=[Java, JavaScript, C#, C++]}
         System.out.println(developer);
 
         Developer mary = new Developer("Mary", "Smith");
         // Developer{firstName='Mary', lastName='Smith', languages=null}
-        
+
         // 생성자에서 languages 추가
         // this(firstName, lastName, Collections.singletonList("Java"));
         // Developer{firstName='Mary', lastName='Smith', languages=[Java]}

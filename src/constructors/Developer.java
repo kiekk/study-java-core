@@ -11,6 +11,18 @@ public class Developer {
     private String lastName;
     private List<String> languages = new ArrayList<>();
 
+    {
+        languages = Arrays.asList("Java", "JavaScript", "C#", "C++");
+    }
+
+    /*
+    초기화 블록은 생성자보다 먼저 실행
+    따라서 기본 생성자는 값을 설정하는 부분이 없기 때문에 초기화 블록에서 설정한 값이 적용
+
+    나머지 생성자는 생성자에서 값을 설정하기 때문에 초기화 블록의 데이터 대신
+    생성자에서 설정한 값이 적용
+     */
+
     public Developer() {
     }
 
