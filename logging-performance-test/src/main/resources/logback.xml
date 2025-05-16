@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <contextName>LoggingPerformanceTest</contextName>
+
+    <!-- 로그 패턴 정의 -->
+    <property name="LOG_PATTERN" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"/>
+    <property name="LOG_FILE_PATH" value="logs/test.log"/>
+
+    <!-- 파일 로그 Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_FILE_PATH}</file>
+        <append>true</append>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 비동기 Appender -->
+    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>5000</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+        <neverBlock>true</neverBlock> <!-- 큐가 꽉 차도 대기하지 않고 버림 -->
+        <appender-ref ref="FILE"/>
+    </appender>
+
+    <!-- 최상위 로그 설정 -->
+    <root level="info">
+        <appender-ref ref="ASYNC_FILE"/>
+    </root>
+</configuration>

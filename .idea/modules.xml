@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/logging-performance-test/logging-performance-test.iml" filepath="$PROJECT_DIR$/logging-performance-test/logging-performance-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging-performance-test.main.iml" filepath="$PROJECT_DIR$/.idea/modules/logging-performance-test.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging-performance-test.test.iml" filepath="$PROJECT_DIR$/.idea/modules/logging-performance-test.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/study-java-core.iml" filepath="$PROJECT_DIR$/study-java-core.iml" />
     </modules>
   </component>
